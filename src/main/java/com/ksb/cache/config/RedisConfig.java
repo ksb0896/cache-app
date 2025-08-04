@@ -33,6 +33,7 @@ public class RedisConfig {
         return RedisCacheManager.create(connectionFactory);
     }
 
+    //enabled key expiration time(TTL)
     @Bean
     public RedisCacheManager cacheManager() {
         RedisCacheConfiguration cacheConfig = myDefaultCacheConfig(Duration.ofMinutes(10)).disableCachingNullValues();
